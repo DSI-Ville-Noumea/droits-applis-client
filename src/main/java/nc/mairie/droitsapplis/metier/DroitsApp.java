@@ -1,7 +1,7 @@
 package nc.mairie.droitsapplis.metier;
 
 /**
- * Objet métier DroitsApp
+ * Objet mÃ©tier DroitsApp
  */
 public class DroitsApp extends nc.mairie.technique.BasicMetier {
 	public String cddrap;
@@ -50,28 +50,28 @@ public void setDroit(String newDroit) {
 	droit = newDroit;
 }
 /**
- Methode à définir dans chaque objet Métier pour instancier un Broker 
+ Methode Ã  dÃ©finir dans chaque objet MÃ©tier pour instancier un Broker 
 */
 protected nc.mairie.technique.BasicBroker definirMyBroker() { 
 	return new DroitsAppBroker(this); 
 }
 /**
- Methode à définir dans chaque objet Métier pour instancier un Broker 
+ Methode Ã  dÃ©finir dans chaque objet MÃ©tier pour instancier un Broker 
 */
 protected DroitsAppBroker getMyDroitsAppBroker() {
 	return (DroitsAppBroker)getMyBasicBroker();
 }
 /**
-* Renvoie une chaîne correspondant à la valeur de cet objet.
-* @return une représentation sous forme de chaîne du destinataire
+* Renvoie une chaÃ®ne correspondant Ã  la valeur de cet objet.
+* @return une reprÃ©sentation sous forme de chaÃ®ne du destinataire
 */
 public String toString() {
-	// Insérez ici le code pour finaliser le destinataire
-	// Cette implémentation transmet le message au super. Vous pouvez remplacer ou compléter le message.
+	// InsÃ©rez ici le code pour finaliser le destinataire
+	// Cette implÃ©mentation transmet le message au super. Vous pouvez remplacer ou complÃ©ter le message.
 	return super.toString();
 }
 /**
- * Retourne un ArrayList d'objet métier : DroitsApp.
+ * Retourne un ArrayList d'objet mÃ©tier : DroitsApp.
  * @return java.util.ArrayList
  */
 public static java.util.ArrayList listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception{
@@ -88,7 +88,7 @@ public static java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplica
 }
 
 /**
- * Retourne un ArrayList d'objet métier : DroitsApp.
+ * Retourne un ArrayList d'objet mÃ©tier : DroitsApp.
  * @return java.util.ArrayList
  */
 public static java.util.ArrayList<String> listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception{
@@ -145,7 +145,7 @@ public int nouvId(nc.mairie.technique.Transaction aTransaction) throws Exception
 	//	recherche du dernier 
 	int nouveauCode = getMyDroitsAppBroker().nouvId(aTransaction);
 	
-	//si pas trouvé
+	//si pas trouvÃ©
 	if (nouveauCode == -1) {
 		//fonctionnellement normal: table vide
 		nouveauCode = 1;

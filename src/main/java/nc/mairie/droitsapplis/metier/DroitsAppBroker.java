@@ -2,7 +2,7 @@ package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicRecord;
 /**
- * Broker de l'Objet métier DroitsApp
+ * Broker de l'Objet mÃ©tier DroitsApp
  */
 public class DroitsAppBroker extends nc.mairie.technique.BasicBroker {
 /**
@@ -61,7 +61,7 @@ public boolean supprimerDroitsApp(nc.mairie.technique.Transaction aTransaction) 
 	return supprimer(aTransaction);
 }
 /**
- * Retourne un ArrayList d'objet métier : DroitsApp.
+ * Retourne un ArrayList d'objet mÃ©tier : DroitsApp.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception {
@@ -75,7 +75,7 @@ public java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplication(nc
 }
 
 /**
- * Retourne un ArrayList d'objet métier : DroitsApp.
+ * Retourne un ArrayList d'objet mÃ©tier : DroitsApp.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception {

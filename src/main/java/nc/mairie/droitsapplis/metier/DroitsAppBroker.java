@@ -34,7 +34,7 @@ protected java.lang.String definirNomTable() {
  */
 protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
 	java.util.Hashtable mappage = new java.util.Hashtable();
-	mappage.put("CDDRAP", new BasicRecord("CDDRAP", "INTEGER", getMyDroitsApp().getClass().getField("cddrap"), "STRING"));
+	mappage.put("CDDRAP", new BasicRecord("CDDRAP", "INTEGER", getMyDroitsApp().getClass().getField("cddrap"), "IDENTITY"));
 	mappage.put("APPLICATION", new BasicRecord("APPLICATION", "CHAR", getMyDroitsApp().getClass().getField("application"), "STRING"));
 	mappage.put("DROIT", new BasicRecord("DROIT", "CHAR", getMyDroitsApp().getClass().getField("droit"), "STRING"));
 	return mappage;

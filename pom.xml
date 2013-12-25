@@ -4,7 +4,7 @@
 	<groupId>nc.mairie</groupId>
 	<artifactId>DroitsApplisClient</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<name>DroitsApplisClient</name>
 	<url>http://maven.apache.org</url>
 	<build>
@@ -47,7 +47,7 @@
 		<dependency>
 			<groupId>nc.mairie</groupId>
 			<artifactId>framework</artifactId>
-			<version>1.7</version>
+			<version>1.8</version>
 		</dependency>
 
 	</dependencies>

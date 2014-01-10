@@ -32,8 +32,8 @@ protected java.lang.String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord>  mappage = new java.util.Hashtable<String, BasicRecord> ();
 	mappage.put("CDDRAP", new BasicRecord("CDDRAP", "INTEGER", getMyDroitsApp().getClass().getField("cddrap"), "IDENTITY"));
 	mappage.put("APPLICATION", new BasicRecord("APPLICATION", "CHAR", getMyDroitsApp().getClass().getField("application"), "STRING"));
 	mappage.put("DROIT", new BasicRecord("DROIT", "CHAR", getMyDroitsApp().getClass().getField("droit"), "STRING"));
@@ -64,10 +64,10 @@ public boolean supprimerDroitsApp(nc.mairie.technique.Transaction aTransaction) 
  * Retourne un ArrayList d'objet métier : DroitsApp.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<DroitsApp> listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by DROIT asc");
 }
-public java.util.ArrayList listerDroitsAppfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
+public java.util.ArrayList<DroitsApp> listerDroitsAppfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" where CDDRAP IN (SELECT CDDRAP from MAIRIE.SIGRAP where CDGROU ="+groupe+")");
 }
 public java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplication(nc.mairie.technique.Transaction aTransaction, String compte, String appli) throws Exception {
@@ -78,7 +78,7 @@ public java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplication(nc
  * Retourne un ArrayList d'objet métier : DroitsApp.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<DroitsApp> listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select distinct APPLICATION from "+getTable()+" order by APPLICATION asc");
 }
 

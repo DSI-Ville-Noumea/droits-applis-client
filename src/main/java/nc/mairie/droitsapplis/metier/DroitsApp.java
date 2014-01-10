@@ -74,11 +74,11 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : DroitsApp.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<DroitsApp> listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	DroitsApp unDroitsApp = new DroitsApp();
 	return unDroitsApp.getMyDroitsAppBroker().listerDroitsApp(aTransaction);
 }
-public static java.util.ArrayList listerDroitsAppfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
+public static java.util.ArrayList<DroitsApp> listerDroitsAppfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
 	DroitsApp unDroitsApp = new DroitsApp();
 	return unDroitsApp.getMyDroitsAppBroker().listerDroitsAppfromGroupe(aTransaction, groupe);
 }

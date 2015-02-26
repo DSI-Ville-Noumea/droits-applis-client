@@ -15,36 +15,42 @@ public DroitsApp() {
 }
 /**
  * Getter de l'attribut cddrap.
+ * @return String
  */
 public String getCddrap() {
 	return cddrap;
 }
 /**
  * Setter de l'attribut cddrap.
+ * @param newCddrap newCddrap 
  */
 public void setCddrap(String newCddrap) { 
 	cddrap = newCddrap;
 }
 /**
  * Getter de l'attribut application.
+ * @return String
  */
 public String getApplication() {
 	return application;
 }
 /**
  * Setter de l'attribut application.
+ * @param newApplication 
  */
 public void setApplication(String newApplication) { 
 	application = newApplication;
 }
 /**
  * Getter de l'attribut droit.
+ * @return String
  */
 public String getDroit() {
 	return droit;
 }
 /**
  * Setter de l'attribut droit.
+ * @param newDroit newDroit 
  */
 public void setDroit(String newDroit) { 
 	droit = newDroit;
@@ -57,6 +63,7 @@ protected nc.mairie.technique.BasicBroker definirMyBroker() {
 }
 /**
  Methode à définir dans chaque objet Métier pour instancier un Broker 
+ * @return DroitsAppBroker
 */
 protected DroitsAppBroker getMyDroitsAppBroker() {
 	return (DroitsAppBroker)getMyBasicBroker();
@@ -72,7 +79,9 @@ public String toString() {
 }
 /**
  * Retourne un ArrayList d'objet métier : DroitsApp.
- * @return java.util.ArrayList
+ * @param aTransaction aTransaction 
+ * @return java.util.ArrayList a
+ * @throws Exception Exception
  */
 public static java.util.ArrayList<DroitsApp> listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	DroitsApp unDroitsApp = new DroitsApp();
@@ -89,7 +98,9 @@ public static java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplica
 
 /**
  * Retourne un ArrayList d'objet métier : DroitsApp.
- * @return java.util.ArrayList
+ * @param aTransaction aTransaction 
+ * @return java.util.ArrayList a
+ * @throws Exception  Exception
  */
 public static java.util.ArrayList<String> listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	java.util.ArrayList<String> stabApplications;
@@ -104,7 +115,10 @@ public static java.util.ArrayList<String> listerApplications(nc.mairie.technique
 
 /**
  * Retourne un DroitsApp.
- * @return DroitsApp
+ * @param aTransaction aTransaction 
+ * @param cdDroit cdDroit
+ * @return DroitsApp DroitsApp
+ * @throws Exception  Exception
  */
 public static DroitsApp chercherDroitsApp(nc.mairie.technique.Transaction aTransaction, String cdDroit) throws Exception{
 	DroitsApp unDroitsApp = new DroitsApp();
@@ -113,6 +127,9 @@ public static DroitsApp chercherDroitsApp(nc.mairie.technique.Transaction aTrans
 /**
  * Methode creerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction  
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean creerDroitsApp(nc.mairie.technique.Transaction aTransaction )  throws Exception {
 
@@ -127,6 +144,9 @@ public boolean creerDroitsApp(nc.mairie.technique.Transaction aTransaction )  th
 /**
  * Methode modifierObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction  
+ * @return boolean
+ * @throws Exception Exception 
  */
 public boolean modifierDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	//Modification du DroitsApp
@@ -135,6 +155,9 @@ public boolean modifierDroitsApp(nc.mairie.technique.Transaction aTransaction) t
 /**
  * Methode supprimerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction  
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean supprimerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	//Suppression de l'DroitsApp

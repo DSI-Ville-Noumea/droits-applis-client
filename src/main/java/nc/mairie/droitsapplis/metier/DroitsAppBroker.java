@@ -7,6 +7,7 @@ import nc.mairie.technique.BasicRecord;
 public class DroitsAppBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur DroitsAppBroker.
+ * @param aMetier aMetier 
  */
 public DroitsAppBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -42,6 +43,9 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
 /**
  * Methode creerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception 
  */
 public boolean creerDroitsApp(nc.mairie.technique.Transaction aTransaction)  throws Exception{
 	return creer(aTransaction);
@@ -49,6 +53,10 @@ public boolean creerDroitsApp(nc.mairie.technique.Transaction aTransaction)  thr
 /**
  * Methode modifierObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception 
+
  */
 public boolean modifierDroitsApp(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return modifier(aTransaction);
@@ -56,6 +64,9 @@ public boolean modifierDroitsApp(nc.mairie.technique.Transaction aTransaction) t
 /**
  * Methode supprimerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception 
  */
 public boolean supprimerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return supprimer(aTransaction);
@@ -63,6 +74,8 @@ public boolean supprimerDroitsApp(nc.mairie.technique.Transaction aTransaction) 
 /**
  * Retourne un ArrayList d'objet métier : DroitsApp.
  * @return java.util.ArrayList
+ * @param aTransaction aTransaction
+ * @throws Exception Exception 
  */
 public java.util.ArrayList<DroitsApp> listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by DROIT asc");
@@ -76,7 +89,9 @@ public java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplication(nc
 
 /**
  * Retourne un ArrayList d'objet métier : DroitsApp.
+ * @param aTransaction aTransaction 
  * @return java.util.ArrayList
+ * @throws Exception Exception 
  */
 public java.util.ArrayList<DroitsApp> listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select distinct APPLICATION from "+getTable()+" order by APPLICATION asc");
@@ -84,7 +99,10 @@ public java.util.ArrayList<DroitsApp> listerApplications(nc.mairie.technique.Tra
 
 /**
  * Retourne un DroitsApp.
- * @return DroitsApp
+ * @param aTransaction aTransaction
+ * @param cdDrap cdDrap
+ * @return DroitsApp DroitsApp
+ * @throws Exception Exception
  */
 public DroitsApp chercherDroitsApp(nc.mairie.technique.Transaction aTransaction, String cdDrap) throws Exception {
 	return (DroitsApp)executeSelect(aTransaction,"select * from "+getTable()+" where CDDRAP = "+cdDrap+"");

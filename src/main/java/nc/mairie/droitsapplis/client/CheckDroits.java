@@ -13,7 +13,7 @@ public class CheckDroits {
  * @param aTransaction
  * @param compte
  * @param appli
- * @return
+ * @return ArrayList
  * @throws Exception
  */
 	public static ArrayList<String> getListDroitsFromCompteAppli(Transaction aTransaction, String compte, String appli) throws Exception{

@@ -85,9 +85,9 @@
 
 
 	<scm>
-		<connection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis-client/trunk</connection>
-		<developerConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis-client/trunk</developerConnection>
-		<url>https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis-client/trunk</url>
+        <connection>scm:git:git://${giturl}.git</connection>
+        <developerConnection>scm:git:git@github.com:DSI-Ville-Noumea/${project.name}.git</developerConnection>
+        <url>https://${giturl}</url>
 	</scm>
 
 	<dependencies>
@@ -114,5 +114,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<framework_version>framework-2.5</framework_version>
 		<java.version>1.7</java.version>
+		<giturl>github.com/DSI-Ville-Noumea/${project.name}</giturl>
 	</properties>
 </project>
